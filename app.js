@@ -1,4 +1,3 @@
-// ⚠️ สำคัญ! แก้ตรงนี้ ใส่ข้อมูล Supabase ของคุณ
 const SUPABASE_URL = 'https://kmmeeqinzfgtoilrabir.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_dmjBNwD6KagdrBRo2TeG-w_BMAUqP_i';  // ใส่ Key ให้ครบ
 
