@@ -1,12 +1,12 @@
 // ⚠️ สำคัญ! แก้ตรงนี้ ใส่ข้อมูล Supabase ของคุณ
-const SUPABASE_URL = 'https://kmmeeqinzfgtoilrabir.supabase.co ';
-const SUPABASE_KEY = 'sb_publishable_dmjBNwD6KagdrBRo2TeG-w_BMAUqP_i';
+const SUPABASE_URL = 'https://kmmeeqinzfgtoilrabir.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_dmjBNwD6KagdrBRo2TeG-w_BMAUqP_i';  // ใส่ Key ให้ครบ
 
-const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // โหลดข้อมูลวันหยุด
 async function loadHolidays() {
-  const { data, error } = await supabase
+  const { data, error } = await supabaseClient
     .from('holidays')
     .select('holiday_date, holiday_name')
     .order('holiday_date', { ascending: true });
@@ -29,7 +29,7 @@ async function loadHolidays() {
 
 // โหลดข้อมูลพนักงาน
 async function loadEmployees() {
-  const { data, error } = await supabase
+  const { data, error } = await supabaseClient
     .from('employees')
     .select('displayname, active')
     .order('displayname', { ascending: true });
