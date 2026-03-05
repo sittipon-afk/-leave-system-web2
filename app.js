@@ -2,7 +2,7 @@
 const SUPABASE_URL = 'https://kmmeeqinzfgtoilrabir.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_dmjBNwD6KagdrBRo2TeG-w_BMAUqP_i';  // ใส่ Key ให้ครบ
 
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // โหลดข้อมูลวันหยุด
 async function loadHolidays() {
